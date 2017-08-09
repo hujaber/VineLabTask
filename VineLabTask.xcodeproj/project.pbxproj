@@ -15,9 +15,13 @@
 		63DF00CE1F3ADE8600D3768A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF00CD1F3ADE8600D3768A /* Extensions.swift */; };
 		63DF00D21F3AE77000D3768A /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF00D11F3AE77000D3768A /* Scores.swift */; };
 		63DF00D41F3B0E6100D3768A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF00D31F3B0E6100D3768A /* TabBarViewController.swift */; };
+		D74CCEAF1F3B6F2F00A90BA7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CCEAE1F3B6F2F00A90BA7 /* BaseViewController.swift */; };
+		D74CCEB11F3B6FCC00A90BA7 /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CCEB01F3B6FCC00A90BA7 /* APICalls.swift */; };
+		E4E01FC1BFE0FAE65C86B0B4 /* Pods_VineLabTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B438E48A7B50D10A80F342 /* Pods_VineLabTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51B438E48A7B50D10A80F342 /* Pods_VineLabTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VineLabTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DF00B81F3ADE3A00D3768A /* VineLabTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VineLabTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DF00BB1F3ADE3A00D3768A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DF00BD1F3ADE3A00D3768A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,10 @@
 		63DF00CD1F3ADE8600D3768A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		63DF00D11F3AE77000D3768A /* Scores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
 		63DF00D31F3B0E6100D3768A /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		79BFAE534116C4D03C12354D /* Pods-VineLabTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VineLabTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VineLabTask/Pods-VineLabTask.debug.xcconfig"; sourceTree = "<group>"; };
+		AFDCA7798D1E03182FD25642 /* Pods-VineLabTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VineLabTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-VineLabTask/Pods-VineLabTask.release.xcconfig"; sourceTree = "<group>"; };
+		D74CCEAE1F3B6F2F00A90BA7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D74CCEB01F3B6FCC00A90BA7 /* APICalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E01FC1BFE0FAE65C86B0B4 /* Pods_VineLabTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				63DF00BA1F3ADE3A00D3768A /* VineLabTask */,
 				63DF00B91F3ADE3A00D3768A /* Products */,
+				BEEF6734AFCE8CD4B1AE1EEE /* Pods */,
+				AC82169F2C4054DFF04AB9FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +79,7 @@
 				63DF00C41F3ADE3B00D3768A /* LaunchScreen.storyboard */,
 				63DF00C71F3ADE3B00D3768A /* Info.plist */,
 				63DF00CD1F3ADE8600D3768A /* Extensions.swift */,
+				D74CCEB01F3B6FCC00A90BA7 /* APICalls.swift */,
 			);
 			path = VineLabTask;
 			sourceTree = "<group>";
@@ -85,8 +97,26 @@
 			children = (
 				63DF00BD1F3ADE3A00D3768A /* ViewController.swift */,
 				63DF00D31F3B0E6100D3768A /* TabBarViewController.swift */,
+				D74CCEAE1F3B6F2F00A90BA7 /* BaseViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AC82169F2C4054DFF04AB9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51B438E48A7B50D10A80F342 /* Pods_VineLabTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEEF6734AFCE8CD4B1AE1EEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79BFAE534116C4D03C12354D /* Pods-VineLabTask.debug.xcconfig */,
+				AFDCA7798D1E03182FD25642 /* Pods-VineLabTask.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63DF00CA1F3ADE3B00D3768A /* Build configuration list for PBXNativeTarget "VineLabTask" */;
 			buildPhases = (
+				45B8DCB224207D7E5A0B457A /* [CP] Check Pods Manifest.lock */,
 				63DF00B41F3ADE3A00D3768A /* Sources */,
 				63DF00B51F3ADE3A00D3768A /* Frameworks */,
 				63DF00B61F3ADE3A00D3768A /* Resources */,
+				8C52465ED065DDD374EF0DA0 /* [CP] Embed Pods Frameworks */,
+				6260928B3312CB960AC5DC9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,16 +190,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45B8DCB224207D7E5A0B457A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6260928B3312CB960AC5DC9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VineLabTask/Pods-VineLabTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C52465ED065DDD374EF0DA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VineLabTask/Pods-VineLabTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63DF00B41F3ADE3A00D3768A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				63DF00BE1F3ADE3A00D3768A /* ViewController.swift in Sources */,
+				D74CCEB11F3B6FCC00A90BA7 /* APICalls.swift in Sources */,
 				63DF00CE1F3ADE8600D3768A /* Extensions.swift in Sources */,
 				63DF00D21F3AE77000D3768A /* Scores.swift in Sources */,
 				63DF00D41F3B0E6100D3768A /* TabBarViewController.swift in Sources */,
 				63DF00BC1F3ADE3A00D3768A /* AppDelegate.swift in Sources */,
+				D74CCEAF1F3B6F2F00A90BA7 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +370,7 @@
 		};
 		63DF00CB1F3ADE3B00D3768A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BFAE534116C4D03C12354D /* Pods-VineLabTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SGAW4ZB949;
@@ -300,6 +384,7 @@
 		};
 		63DF00CC1F3ADE3B00D3768A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDCA7798D1E03182FD25642 /* Pods-VineLabTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SGAW4ZB949;
@@ -330,6 +415,7 @@
 				63DF00CC1F3ADE3B00D3768A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
