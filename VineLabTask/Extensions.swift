@@ -16,7 +16,7 @@ extension UIColor {
     }
 
     fileprivate enum AgeRange {
-        static let def = 0xFFE4E4E4 //can't use default as a variable name
+        static let def = 0xFFE4E4E4
         static let others = 0xFF212121
         static let ageRange_13_17 = 0xC0E8FF
         static let ageRange_18_24 = 0x97D9FF

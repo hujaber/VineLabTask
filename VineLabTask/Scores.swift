@@ -12,20 +12,20 @@ import UIKit
 public struct Scores {
     let quality: Quality?
     let consistency: Consistency?
-    let discovery: Any?
+    let discovery: Discovery?
     let consumption: Consumption?
-    let stickiness: Any?
+    let stickiness: Stickiness?
     let engagement: Engagement?
-    let amplification: Any?
+    let amplification: Amplification?
 
     init(json: [String: Any]) {
         quality = Quality.init(json: json["quality"] as! [String: Any])
         consistency = Consistency.init(json: json["consistency"] as! [String: Any])
-        discovery = json["discovery"]
+        discovery = Discovery.init(json: json["discovery"] as! [String: Any])
         consumption = Consumption.init(json: json["consumption"] as! [String: Any])
-        stickiness = json["stickiness"]
+        stickiness = Stickiness.init(json: json["stickiness"] as! [String: Any])
         engagement = Engagement.init(json: json["engagement"] as! [String: Any])
-        amplification = json["amplification"]
+        amplification = Amplification.init(json: json["amplification"] as! [String: Any])
     }
 }
 
@@ -76,6 +76,51 @@ struct Consumption {
 }
 
 struct Engagement {
+    let score: CGFloat?
+    let status: Int?
+    let video: Video?
+    let photo: Photo?
+    let link: String?
+    init(json: [String: Any]) {
+        score = json["score"] as? CGFloat
+        status = json["status"] as? Int
+        video = Video.init(json: json["video"] as! [String : Any])
+        photo = Photo.init(json: json["photo"] as! [String: Any])
+        link = json["link"] as? String
+    }
+}
+
+struct Discovery {
+    let score: CGFloat?
+    let status: Int?
+    let video: Video?
+    let photo: Photo?
+    let link: String?
+    init(json: [String: Any]) {
+        score = json["score"] as? CGFloat
+        status = json["status"] as? Int
+        video = Video.init(json: json["video"] as! [String : Any])
+        photo = Photo.init(json: json["photo"] as! [String: Any])
+        link = json["link"] as? String
+    }
+}
+
+struct Stickiness {
+    let score: CGFloat?
+    let status: Int?
+    let video: Video?
+    let photo: Photo?
+    let link: String?
+    init(json: [String: Any]) {
+        score = json["score"] as? CGFloat
+        status = json["status"] as? Int
+        video = Video.init(json: json["video"] as! [String : Any])
+        photo = Photo.init(json: json["photo"] as! [String: Any])
+        link = json["link"] as? String
+    }
+}
+
+struct Amplification {
     let score: CGFloat?
     let status: Int?
     let video: Video?
