@@ -43,16 +43,16 @@ class APIRequests {
         }
     }
     
-    static func getScores(completion: @escaping (Bool, Error?, String?, Scores?) ->()) {
+    static func getScores(completion: @escaping (Bool, Error?, String?, Scores?, [String: Any]?) ->()) {
         request(urlString: APIURLString.scores, parameters: nil, method: .get) { (success, error, errorMessage, response) in
             if success {
                 guard let responseDictionary = response?.result.value as? [String: Any] else {
                     return
                 }
                 let scores = Scores.init(json: responseDictionary["data"] as! [String : Any])
-                completion(true, nil, nil, scores)
+                completion(true, nil, nil, scores, responseDictionary)
             } else {
-                completion(false, response?.result.error, "Failed", nil)
+                completion(false, response?.result.error, "Failed", nil, nil)
             }
         }
     }

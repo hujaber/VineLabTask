@@ -11,15 +11,19 @@ import UIKit
 class ViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    var scoreData: Scores? = nil
+    let tableData = ["iScore", "Discovery", "Consumption"]
+    
+    enum TableCells {
+       static let parent = "ParentCell"
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         showLoader()
-        APIRequests.getScores { (success, error, errorMessage, scoresObject) in
-            self.hideLoader()
-            print(success)
-        }
+        title = "Scores"
+
     }
 
     func setupTableView() {
@@ -27,10 +31,23 @@ class ViewController: BaseViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView.init()
     }
+    
+    //MARK: - Requests
+    
+    func getScoreData() {
+        APIRequests.getScores { (success, error, errorMessage, scoresObject, responseDictionary) in
+            self.hideLoader()
+            if success {
+                self.scoreData = scoresObject
+            }
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
+        let counter: Int = 0
+
         return 1
     }
 
