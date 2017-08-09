@@ -39,13 +39,38 @@
                     <view key="view" contentMode="scaleToFill" id="doy-9Z-Ezx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-s4-c3Z">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5BG-Vg-JJH">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5BG-Vg-JJH" id="181-Bv-yWd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVe-s4-c3Z" firstAttribute="leading" secondItem="doy-9Z-Ezx" secondAttribute="leading" id="d6z-gO-RYq"/>
+                            <constraint firstAttribute="trailing" secondItem="SVe-s4-c3Z" secondAttribute="trailing" id="mOX-Rn-sOP"/>
+                            <constraint firstAttribute="bottom" secondItem="SVe-s4-c3Z" secondAttribute="bottom" id="rn8-Lu-2kU"/>
+                            <constraint firstItem="SVe-s4-c3Z" firstAttribute="top" secondItem="gnQ-yZ-UEW" secondAttribute="bottom" constant="8" symbolic="YES" id="ttq-HI-LRr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dVQ-lJ-SgC"/>
+                    <connections>
+                        <outlet property="tableView" destination="SVe-s4-c3Z" id="aAL-zB-SG8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fB-Nv-u4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-570" y="-253"/>
+            <point key="canvasLocation" x="-570.39999999999998" y="-253.2233883058471"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="haQ-74-caH">
