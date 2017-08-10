@@ -57,4 +57,38 @@ class APIRequests {
         }
     }
 
+    static func getGraphValues(completion: @escaping (Bool, String?, [GraphItem]?) ->()) {
+        request(urlString: APIURLString.demographicsAge, parameters: nil, method: .get) { (success, error, errorMsg, response) in
+            if success {
+                guard let responseDic = response?.result.value as? [String: AnyObject] else {
+                    return
+                }
+                var valueArray = [GraphItem]()
+                let dataArray = responseDic["data"] as? [AnyObject]
+                for dict in dataArray! {
+                    let graphItem = GraphItem.init(json: dict as? [String : Any])
+                    valueArray.append(graphItem)
+                }
+                completion(success, nil, valueArray)
+            } else {
+                completion(false, "Failed", nil)
+            }
+        }
+    }
+
+    static func getGenderValues(completion: @escaping (Bool, CGFloat, CGFloat) ->()) {
+        request(urlString: APIURLString.demographicsGender, parameters: nil, method: .get) { (success, error, errorString, response) in
+            if success {
+                guard let responseDictionary = response?.result.value as? [String: AnyObject] else {
+                    return
+                }
+                var male = responseDictionary["data"]?["male"] as? CGFloat
+                var female = responseDictionary["data"]?["female"] as? CGFloat
+                completion(success, male!, female!)
+            } else {
+                completion(false, 0, 0)
+            }
+        }
+    }
+
 }

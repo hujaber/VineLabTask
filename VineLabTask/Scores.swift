@@ -35,13 +35,13 @@ struct Quality {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -50,13 +50,13 @@ struct Consistency {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -65,13 +65,13 @@ struct Consumption {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -80,13 +80,13 @@ struct Engagement {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -95,13 +95,13 @@ struct Discovery {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -110,13 +110,13 @@ struct Stickiness {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -125,13 +125,13 @@ struct Amplification {
     let status: Int?
     let video: Video?
     let photo: Photo?
-    let link: String?
+    let link: Link?
     init(json: [String: Any]?) {
         score = json?["score"] as? CGFloat
         status = json?["status"] as? Int
         video = Video.init(json: json?["video"] as? [String : Any])
         photo = Photo.init(json: json?["photo"] as? [String: Any])
-        link = json?["link"] as? String
+        link = Link.init(json: json?["link"] as? [String: Any])
     }
 }
 
@@ -146,6 +146,16 @@ struct Photo {
 }
 
 struct Video {
+    let score: CGFloat?
+    let status: Int?
+
+    init(json: [String: Any]?) {
+        score = json?["score"] as? CGFloat
+        status = json?["status"] as? Int
+    }
+}
+
+struct Link {
     let score: CGFloat?
     let status: Int?
 

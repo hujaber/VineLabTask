@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632C99121F3C5D7F00FA02FB /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C99111F3C5D7F00FA02FB /* ChartTableViewCell.swift */; };
+		632C99141F3C5E2D00FA02FB /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C99131F3C5E2D00FA02FB /* AudienceViewController.swift */; };
+		632C99191F3C6C5D00FA02FB /* GraphItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C99181F3C6C5D00FA02FB /* GraphItem.swift */; };
 		63DF00BC1F3ADE3A00D3768A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF00BB1F3ADE3A00D3768A /* AppDelegate.swift */; };
 		63DF00BE1F3ADE3A00D3768A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF00BD1F3ADE3A00D3768A /* ViewController.swift */; };
 		63DF00C11F3ADE3B00D3768A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DF00BF1F3ADE3B00D3768A /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		51B438E48A7B50D10A80F342 /* Pods_VineLabTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VineLabTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		632C99111F3C5D7F00FA02FB /* ChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
+		632C99131F3C5E2D00FA02FB /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
+		632C99181F3C6C5D00FA02FB /* GraphItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphItem.swift; sourceTree = "<group>"; };
 		63DF00B81F3ADE3A00D3768A /* VineLabTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VineLabTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DF00BB1F3ADE3A00D3768A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DF00BD1F3ADE3A00D3768A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		632C99101F3C5D6800FA02FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632C99111F3C5D7F00FA02FB /* ChartTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		63DF00AF1F3ADE3A00D3768A = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +85,7 @@
 		63DF00BA1F3ADE3A00D3768A /* VineLabTask */ = {
 			isa = PBXGroup;
 			children = (
+				632C99101F3C5D6800FA02FB /* Views */,
 				63DF00D01F3AE71B00D3768A /* Controllers */,
 				63DF00CF1F3AE68E00D3768A /* Model */,
 				63DF00BB1F3ADE3A00D3768A /* AppDelegate.swift */,
@@ -88,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				63DF00D11F3AE77000D3768A /* Scores.swift */,
+				632C99181F3C6C5D00FA02FB /* GraphItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +114,7 @@
 				63DF00BD1F3ADE3A00D3768A /* ViewController.swift */,
 				63DF00D31F3B0E6100D3768A /* TabBarViewController.swift */,
 				D74CCEAE1F3B6F2F00A90BA7 /* BaseViewController.swift */,
+				632C99131F3C5E2D00FA02FB /* AudienceViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,13 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632C99121F3C5D7F00FA02FB /* ChartTableViewCell.swift in Sources */,
 				63DF00BE1F3ADE3A00D3768A /* ViewController.swift in Sources */,
 				D74CCEB11F3B6FCC00A90BA7 /* APICalls.swift in Sources */,
+				632C99191F3C6C5D00FA02FB /* GraphItem.swift in Sources */,
 				63DF00CE1F3ADE8600D3768A /* Extensions.swift in Sources */,
 				63DF00D21F3AE77000D3768A /* Scores.swift in Sources */,
 				63DF00D41F3B0E6100D3768A /* TabBarViewController.swift in Sources */,
 				63DF00BC1F3ADE3A00D3768A /* AppDelegate.swift in Sources */,
 				D74CCEAF1F3B6F2F00A90BA7 /* BaseViewController.swift in Sources */,
+				632C99141F3C5E2D00FA02FB /* AudienceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

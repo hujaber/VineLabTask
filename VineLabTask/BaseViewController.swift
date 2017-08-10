@@ -18,6 +18,8 @@ class BaseViewController: UIViewController {
     func showLoader() {
         UIApplication.shared.beginIgnoringInteractionEvents()
         SVProgressHUD.setForegroundColor(UIColor.appBlue)
+        SVProgressHUD.setBackgroundColor(UIColor.white)
+        SVProgressHUD.setDefaultMaskType(.gradient)
         SVProgressHUD.show(withStatus: "Fetching data..")
     }
     

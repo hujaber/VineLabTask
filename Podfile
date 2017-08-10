@@ -8,5 +8,6 @@ target 'VineLabTask' do
   # Pods for VineLabTask
 pod 'Alamofire', '~> 4.4'
 pod 'SVProgressHUD'
+pod 'Charts'
 
 end

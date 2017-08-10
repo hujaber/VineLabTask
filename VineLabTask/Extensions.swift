@@ -61,13 +61,20 @@ extension UIColor {
         )
     }
 
-    // let's suppose alpha is the first component (ARGB)
     convenience init(argb: Int) {
         self.init(
             red: (argb >> 16) & 0xFF,
             green: (argb >> 8) & 0xFF,
             blue: argb & 0xFF,
-            a: (argb >> 24) & 0xFF
+            a: (argb >> 24) | 0xFF
         )
+    }
+}
+
+extension CGFloat {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> CGFloat {
+        let divisor = pow(10.0, CGFloat(places))
+        return (self * divisor).rounded() / divisor
     }
 }
