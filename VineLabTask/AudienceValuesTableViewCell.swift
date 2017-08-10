@@ -53,6 +53,8 @@ class AudienceValuesTableViewCell: UITableViewCell {
     }
 
     func updateLabels(size: CGFloat?, percentage: CGFloat?) {
+        sizeLabel.text = ""
+        self.percentage.text = ""
         if size != nil {
             sizeLabel.text = "\(size!.roundTo(places: 2))"
         }
