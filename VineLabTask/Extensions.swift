@@ -12,27 +12,27 @@ import UIKit
 extension UIColor {
 
     fileprivate enum AppColors {
-        static let appBlue = 0xFF1DAAFC
+        static let appBlue: CLongLong = 0xFF1DAAFC
     }
 
     fileprivate enum AgeRange {
-        static let def = 0xFFE4E4E4
-        static let others = 0xFF212121
-        static let ageRange_13_17 = 0xC0E8FF
-        static let ageRange_18_24 = 0x97D9FF
-        static let ageRange_25_34 = 0x68C8FF
-        static let ageRange_35_44 = 0x4ABCFF
-        static let ageRange_45_54 = 0x30B3FF
-        static let ageRange_55_64 = 0x13A8FF
+        static let def: CLongLong = 0xFFE4E4E4
+        static let others: CLongLong = 0xFF212121
+        static let ageRange_13_17: CLongLong = 0xC0E8FF
+        static let ageRange_18_24: CLongLong = 0x97D9FF
+        static let ageRange_25_34: CLongLong = 0x68C8FF
+        static let ageRange_35_44: CLongLong = 0x4ABCFF
+        static let ageRange_45_54: CLongLong = 0x30B3FF
+        static let ageRange_55_64: CLongLong = 0x13A8FF
     }
 
     fileprivate enum Score {
-        static let quality =  0xFF212121
-        static let discovery = 0xFFBE9DED
-        static let consumption = 0xFFFFC65C
-        static let stickiness = 0xFFABEC01
-        static let engagement = 0xFFEF3C79
-        static let amplification = 0xFF01BBD6
+        static let quality: CLongLong =  0xFF212121
+        static let discovery: CLongLong = 0xFFBE9DED
+        static let consumption: CLongLong = 0xFFFFC65C
+        static let stickiness: CLongLong = 0xFFABEC01
+        static let engagement: CLongLong = 0xFFEF3C79
+        static let amplification: CLongLong = 0xFF01BBD6
     }
 
     static let appBlue = UIColor.init(argb: AppColors.appBlue)
@@ -52,7 +52,7 @@ extension UIColor {
     static let scoreAmplification = UIColor.init(argb: Score.amplification)
     
 
-    convenience init(red: Int, green: Int, blue: Int, a: Int = 0xFF) {
+    convenience init(red: Int64, green: Int64, blue: Int64, a: Int64 = 0xFF) {
         self.init(
             red: CGFloat(red) / 255.0,
             green: CGFloat(green) / 255.0,
@@ -61,7 +61,7 @@ extension UIColor {
         )
     }
 
-    convenience init(argb: Int) {
+    convenience init(argb: Int64) {
         self.init(
             red: (argb >> 16) & 0xFF,
             green: (argb >> 8) & 0xFF,

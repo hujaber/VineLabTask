@@ -12,7 +12,7 @@ import Alamofire
 enum APIURLString {
     static let scores = "https://api.myjson.com/bins/zvr7l"
     static let audienceSizeValues = "https://api.myjson.com/bins/19iz7l"
-    static let audienceSize = "https://api.myjson.com/bins/suu9t"
+    static let audienceSizeGraph = "https://api.myjson.com/bins/suu9t"
     static let demographicsAge = "https://api.myjson.com/bins/6vy1t"
     static let demographicsGender = "https://api.myjson.com/bins/c8uht"
 }
@@ -82,11 +82,44 @@ class APIRequests {
                 guard let responseDictionary = response?.result.value as? [String: AnyObject] else {
                     return
                 }
-                var male = responseDictionary["data"]?["male"] as? CGFloat
-                var female = responseDictionary["data"]?["female"] as? CGFloat
+                let male = responseDictionary["data"]?["male"] as? CGFloat
+                let female = responseDictionary["data"]?["female"] as? CGFloat
                 completion(success, male!, female!)
             } else {
                 completion(false, 0, 0)
+            }
+        }
+    }
+
+    static func getAudienceSizeValues(completion: @escaping (Bool, AudienceSizeValues?) ->()) {
+        request(urlString: APIURLString.audienceSizeValues, parameters: nil, method: .get) { (success, error, errormsg, response) in
+            if success {
+                guard let responseDictionary = response?.result.value as? [String: AnyObject] else {
+                    return
+                }
+                let audienceSizeValues = AudienceSizeValues.init(json: responseDictionary["data"] as! [String : AnyObject])
+                completion(success, audienceSizeValues)
+            } else {
+                completion(false, nil)
+            }
+        }
+    }
+
+    static func getAudienceSizeGraphData(completion: @escaping (Bool, [AudienceSizeGrowth]?) ->()) {
+        request(urlString: APIURLString.audienceSizeGraph, parameters: nil, method: .get) { (success, error, errormsg, response) in
+            if success {
+                guard let responseDictionary = response?.result.value as? [String: AnyObject] else {
+                    return
+                }
+                var tempArray = [AudienceSizeGrowth]()
+                let dataArray = responseDictionary["data"] as? [AnyObject]
+                for dict in dataArray! {
+                    let audienceSizeGrowthItem = AudienceSizeGrowth.init(json: dict as? [String : AnyObject])
+                    tempArray.append(audienceSizeGrowthItem)
+                }
+                completion(success, tempArray)
+            } else {
+                completion(success, nil)
             }
         }
     }
