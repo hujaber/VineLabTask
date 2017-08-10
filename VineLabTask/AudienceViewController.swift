@@ -25,6 +25,10 @@ class AudienceViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        getData()
+    }
+
+    func getData() {
         showLoader()
         APIRequests.getGraphValues { (success, errorString, dataArray) in
             if success {
@@ -52,6 +56,7 @@ class AudienceViewController: BaseViewController {
         APIRequests.getAudienceSizeValues { (success, result) in
             if success {
                 self.audienceValues = result
+                self.tableView.reloadData()
             }
         }
     }
